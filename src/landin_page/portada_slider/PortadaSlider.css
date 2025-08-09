@@ -1,0 +1,117 @@
+.portada-slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 0; /* Espacio superior e inferior dentro del fondo */
+  min-height: 100vh; /* Ajusta según sea necesario */
+  box-sizing: border-box;
+  background-image: url(../../assets/backgraund_img.webp); /* Set background image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-color: var(--color-black); /* Fallback background color */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  margin: 0; /* Elimina cualquier margen externo */
+}
+
+.main-title {
+  font-family: var(--font-bebas); /* Tipografía para títulos */
+  font-size: var(--text-size-h1); /* Tamaño de título principal */
+  margin-bottom: 30px;
+  color: var(--color-white); /* Color de texto blanco */
+  max-width: 1000px; /* Limita el ancho del título */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video-box {
+  position: relative;
+  width: 80%; /* Ajusta el ancho del recuadro del video */
+  max-width: 900px; /* Ancho máximo para el video */
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.unmute-button {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-family: var(--font-futura);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.unmute-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.background-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.company-description {
+  font-family: var(--font-futura); /* Tipografía para descripciones */
+  font-size: var(--text-size-body); /* Tamaño de texto de cuerpo */
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: var(--color-gray); /* Color de texto gris */
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-button {
+  background-color: var(--color-red); /* Color de botón rojo */
+  color: var(--color-white);
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: var(--text-size-body); /* Tamaño de texto de cuerpo para el botón */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #5a0401; /* Mantengo el hover de WhatsApp o puedes cambiarlo a un tono de rojo */
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: var(--text-size-h2); /* Ajuste de tamaño para pantallas más pequeñas */
+  }
+
+  .video-box {
+    width: 95%;
+  }
+
+  .company-description {
+    font-size: var(--text-size-small); /* Ajuste de tamaño para pantallas más pequeñas */
+  }
+
+  .contact-button {
+    padding: 12px 25px;
+    font-size: var(--text-size-small); /* Ajuste de tamaño para pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: var(--text-size-h3); /* Ajuste de tamaño para pantallas muy pequeñas */
+  }
+
+  .video-box {
+    width: 100%;
+  }
+}

@@ -1,0 +1,121 @@
+.nuestros-clientes-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+    background-color: var(--color-forte); /* Usando color de index.css */
+}
+
+.image-container {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.top-image {
+
+  height: 300px;
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+}
+
+.description-text {
+  font-family: var(--font-futura);
+  font-size: var(--text-size-body);
+  color: var(--color-gray);
+  margin-bottom: 30px;
+  max-width: 800px; /* Limita el ancho del texto para mejor legibilidad */
+  line-height: 1.6;
+}
+
+.section-title {
+  font-family: var(--font-bebas);
+  font-size: var(--text-size-h2);
+  color: var(--color-white);
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.logos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px; /* Espacio entre los logos */
+  width: 100%;
+  max-width: 1200px; /* Ancho máximo para los logos */
+}
+
+.client-logo {
+  height: 80px; /* Altura fija para los logos */
+  width: auto; /* Ancho automático para mantener la proporción */
+  max-width: 150px; /* Ancho máximo para cada logo */
+  object-fit: contain; /* Asegura que el logo se ajuste sin recortarse */
+}
+
+.slide-up-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 4s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .top-image {
+    height: 175px;
+  }
+
+  .description-text {
+    font-size: var(--text-size-small);
+    padding: 0 15px;
+  }
+
+  .section-title {
+    font-size: var(--text-size-h3);
+  }
+
+  .client-logo {
+    height: 60px;
+    max-width: 100px;
+  }
+
+  .logos-container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-image {
+    height: 80px;
+  }
+
+  .description-text {
+    font-size: 0.8em;
+  }
+
+  .section-title {
+    font-size: 1.5em;
+  }
+
+  .client-logo {
+    height: 50px;
+    max-width: 80px;
+  }
+
+  .logos-container {
+    gap: 15px;
+  }
+}

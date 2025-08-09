@@ -1,0 +1,80 @@
+.servicios-mobile-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0; /* Aumenta el padding vertical */
+  background-color: var(--color-forte);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente */
+}
+
+.servicios-mobile-title {
+  font-family: var(--font-bebas);
+  font-size: var(--text-size-h1);
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: 40px; /* Aumenta el margen inferior */
+}
+
+.carousel-container {
+  width: 100%; /* Ajusta el ancho para dar más espacio lateral */
+  max-width: 90vw; /* Limita el ancho máximo del carrusel */
+  position: relative;
+  overflow: hidden; /* Asegura que las tarjetas se recorten correctamente */
+  border-radius: 10px; /* Bordes redondeados para el contenedor del carrusel */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Curva de transición más suave */
+}
+
+.carousel-slide {
+  min-width: 100%;
+  padding: 0; /* Elimina padding que podría causar problemas de ancho */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* Centra la tarjeta dentro del slide */
+  align-items: center;
+}
+
+.carousel-slide .servicio-card {
+  width: 100%; /* Asegura que la tarjeta ocupe todo el slide */
+  height: 450px; /* Permite que la altura se ajuste al contenido */
+  max-height: 600px; /* Limita la altura máxima de la tarjeta */
+}
+
+.pagination-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px; /* Aumenta el margen superior */
+}
+
+.dot {
+  width: 12px; /* Aumenta el tamaño del dot */
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-gray); /* Color más suave para los dots inactivos */
+  margin: 0 8px; /* Aumenta el espacio entre dots */
+  border: 2px solid transparent; /* Borde transparente por defecto */
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease; /* Transición suave para cambios de estado */
+}
+
+.dot.active {
+  background-color: var(--color-primary); /* Color de acento para el dot activo */
+  border-color: var(--color-white); /* Borde blanco para el dot activo */
+  transform: scale(1.2); /* Ligeramente más grande cuando está activo */
+}
+
+@media (max-width: 480px) {
+  .servicios-mobile-title {
+    font-size: var(--text-size-h2); /* Ajusta el tamaño del título para pantallas más pequeñas */
+  }
+
+  .carousel-container {
+    width: 95%; /* Ocupa más ancho en pantallas muy pequeñas */
+  }
+}

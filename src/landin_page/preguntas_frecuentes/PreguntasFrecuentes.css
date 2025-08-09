@@ -1,0 +1,53 @@
+/* PreguntasFrecuentes.css */
+.preguntas-frecuentes-section {
+  padding: 40px 20px;
+  background-color: var(--color-black); /* Assuming a dark background from your project */
+  color: var(--color-white); /* Assuming white text color */
+  text-align: center;
+}
+
+.preguntas-frecuentes-title {
+  font-family: var(--font-bebas); /* Use your project's font variables */
+  font-size: var(--text-size-h1); /* Use your project's text size variables */
+  margin-bottom: 40px;
+  color: var(--color-white);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
+  background-color: var(--color-gray-dark); /* A slightly lighter dark for contrast */
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: var(--color-gray); /* Hover effect */
+}
+
+.faq-question {
+  font-family: var(--font-futura); /* Use your project's font variables */
+  font-size: var(--text-size-body); /* Use your project's text size variables */
+  margin: 0;
+  color: var(--color-white);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .preguntas-frecuentes-title {
+    font-size: var(--text-size-h2);
+  }
+
+  .faq-list {
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,65 @@
+.servicio-card {
+  position: relative;
+  flex: 1 1 300px; /* flex-grow, flex-shrink, flex-basis: Permite que las tarjetas se ajusten */
+  width: auto; /* Establece un ancho máximo para evitar que las tarjetas sean demasiado anchas */
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--color-white); /* Usando color de index.css */
+  transition: transform 0.3s ease-in-out;
+}
+
+.servicio-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-content {
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.603) 0%, rgba(0, 0, 0, 0) var(--gradient-height, 40%));
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-family: var(--font-bebas); /* Usando fuente de index.css */
+  font-size: var(--text-size-h3); /* Usando tamaño de texto de index.css */
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: auto; /* Empuja la descripción hacia abajo */
+  width: 50%; /* Ocupa hasta la mitad del ancho */
+  line-height: 1.2; /* Permite que el texto pase a una segunda línea */
+}
+
+.card-description {
+  font-family: var(--font-futura); /* Usando fuente de index.css */
+  font-size: var(--text-size-body); /* Usando tamaño de texto de index.css */
+  text-align: left;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  margin-bottom: 0;
+}
+
+.card-description.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Desktop-specific hover effect for description */
+.servicio-card:not(.is-mobile) .card-description {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.servicio-card:not(.is-mobile):hover .card-description {
+  opacity: 1;
+  transform: translateX(0);
+}

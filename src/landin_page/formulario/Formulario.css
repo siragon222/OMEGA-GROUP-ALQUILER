@@ -1,0 +1,147 @@
+.formulario-section {
+  padding: 4rem 1rem;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.formulario-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.formulario-left {
+  width: 100%;
+}
+
+.formulario-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+.formulario-right {
+  width: 100%;
+}
+
+.formulario-title {
+  font-family: var(--font-bebas);
+  font-size: var(--text-size-h2);
+  margin: 0 0 0.25rem 0;
+  color: var(--color-white);
+  letter-spacing: 0.5px;
+}
+
+.formulario-subtitle {
+  font-family: var(--font-futura);
+  font-size: var(--text-size-body);
+  color: var(--color-gray);
+  margin: 0 0 2rem 0;
+}
+
+.formulario-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1.25rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  font-family: var(--font-futura);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-white);
+}
+
+.form-field input[type="text"],
+.form-field input[type="tel"],
+.form-field input[type="email"] {
+  font-family: var(--font-futura);
+  background-color: var(--color-forte);
+  color: var(--color-white);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 0.75rem 0.9rem;
+  outline: none;
+}
+
+.form-field input::placeholder {
+  color: #b3b3b3;
+}
+
+/* Make email full width */
+.form-field:nth-of-type(3) {
+  grid-column: 1 / -1;
+}
+
+.form-checkbox {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.form-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-red);
+}
+
+.form-checkbox label {
+  font-family: var(--font-futura);
+  font-size: var(--text-size-small);
+  color: var(--color-gray);
+}
+
+.submit-button {
+  grid-column: 1 / -1;
+  margin-top: 0.5rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 10px;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  border: none;
+  font-family: var(--font-futura);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease, filter 0.15s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .formulario-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .formulario-form {
+    grid-template-columns: 1fr;
+  }
+
+  /* Keep all fields full width on mobile */
+  .form-field,
+  .form-field:nth-of-type(3),
+  .form-checkbox,
+  .submit-button {
+    grid-column: 1 / -1;
+  }
+}
+
+

@@ -1,0 +1,75 @@
+/* Respuesta.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top of other content */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background-color: var(--color-white); /* White background for the modal */
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px; /* Max width for desktop */
+  width: 90%; /* Responsive width */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-answer {
+  font-family: var(--font-futura); /* Use your project's font variables */
+  font-size: var(--text-size-body); /* Use your project's text size variables */
+  color: var(--color-black); /* Dark text for readability */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal-close-button {
+  background-color: var(--color-primary); /* Your project's primary color */
+  color: var(--color-white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: var(--font-bebas); /* Your project's font for buttons */
+  font-size: var(--text-size-button); /* Your project's text size for buttons */
+  transition: background-color 0.3s ease;
+}
+
+.modal-close-button:hover {
+  background-color: var(--color-dark-primary); /* A darker shade for hover */
+}
+
+/* Responsive adjustments for modal */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .modal-answer {
+    font-size: var(--text-size-body-small); /* Adjust font size for smaller screens */
+  }
+
+  .modal-close-button {
+    font-size: var(--text-size-button-small);
+    padding: 8px 15px;
+  }
+}

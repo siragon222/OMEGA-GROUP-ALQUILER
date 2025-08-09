@@ -1,0 +1,66 @@
+.nuestro-servicios-section {
+  text-align: center;
+  padding: 2em 0;
+  background-color: var(--color-forte); /* Usando color de index.css */
+}
+
+.nuestro-servicios-title {
+  font-family: var(--font-bebas); /* Usando fuente de index.css */
+  font-size: var(--text-size-h1); /* Usando tamaño de texto de index.css */
+  color: var(--color-white); /* Usando color de index.css */
+  margin-bottom: 1em;
+}
+
+.servicios-container {
+  display: flex;
+  justify-content: center;
+  gap: 2px; /* Añade un pequeño espacio entre las tarjetas */
+  /* flex-wrap: wrap; // Comentado para evitar que las tarjetas se envuelvan */
+  padding: 0;
+  overflow-x: auto; /* Permite el desplazamiento horizontal */
+  -webkit-overflow-scrolling: touch; /* Mejora el desplazamiento en dispositivos iOS */
+  padding-bottom: 20px; /* Espacio para la barra de desplazamiento */
+}
+
+.servicios-container::-webkit-scrollbar {
+  height: 10px; /* Altura de la barra de desplazamiento */
+}
+
+.servicios-container::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary); /* Color de la barra de desplazamiento */
+  border-radius: 5px;
+}
+
+.servicios-container::-webkit-scrollbar-track {
+  background-color: var(--color-gray); /* Color de fondo de la barra de desplazamiento */
+}
+
+/* Comportamiento en móvil (carrusel) */
+@media (max-width: 768px) {
+  .servicios-container {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start; /* Alinea las tarjetas al inicio para el carrusel */
+    padding-bottom: 20px; /* Espacio para los puntos de paginación */
+  }
+
+  .servicios-container::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento */
+  }
+
+  .servicios-container > * {
+    flex: 0 0 calc(100% - 40px); /* Muestra una tarjeta completa con espacio para la siguiente */
+    scroll-snap-align: start;
+    margin-right: 20px; /* Espacio entre tarjetas */
+  }
+
+  .servicios-container::after {
+    content: '';
+    flex: 0 0 20px; /* Espacio para la tarjeta "asomada" */
+  }
+}
+
+/* Puntos de paginación (para móvil) - Esto requeriría JS para la funcionalidad */
+/* Puedes implementar los puntos de paginación con un componente adicional en React */
+/* Por ejemplo, un div con varios spans o divs que cambien de estilo según la tarjeta activa */
