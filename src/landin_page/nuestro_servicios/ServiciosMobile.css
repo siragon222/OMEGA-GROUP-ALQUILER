@@ -2,7 +2,7 @@
   width: 100%;
   overflow: hidden;
   padding: 40px 0; /* Aumenta el padding vertical */
-  background-color: var(--color-forte);
+  background-color: var(--color-black);
   display: flex;
   flex-direction: column;
   align-items: center; /* Centra los elementos horizontalmente */
@@ -67,6 +67,23 @@
   background-color: var(--color-primary); /* Color de acento para el dot activo */
   border-color: var(--color-white); /* Borde blanco para el dot activo */
   transform: scale(1.2); /* Ligeramente más grande cuando está activo */
+}
+
+/* Botón de cotización para mobile */
+.servicios-mobile-contact-button {
+  margin-top: 24px;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  padding: 14px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: var(--text-size-body);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.servicios-mobile-contact-button:hover {
+  background-color: #b30000;
 }
 
 @media (max-width: 480px) {

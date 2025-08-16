@@ -8,18 +8,18 @@ const PreguntasFrecuentes = () => {
   const faqs = [
     {
       id: 1,
-      question: '¿Cuál es el horario de atención al cliente?',
-      answer: 'Nuestro equipo de soporte está disponible de lunes a viernes de 9:00 AM a 6:00 PM.'
+      question: 'Disponibilidad de servicios',
+      answer: 'Nuestra disponibilidad es inmediata, con capacidad de respuesta las 24 horas, los 7 días de la semana. Gracias a nuestra infraestructura y equipo especializado, garantizamos atención prioritaria y ejecución sin demoras, asegurando que sus operaciones nunca se detengan.'
     },
     {
       id: 2,
-      question: '¿Cómo puedo solicitar una cotización?',
-      answer: 'Puedes solicitar una cotización a través de nuestro formulario de contacto en la sección "Contacto" o llamando a nuestro número de teléfono.'
+      question: 'Soporte técnico y mantenimiento',
+      answer: 'Contamos con soporte técnico especializado y mantenimiento preventivo y correctivo, incluyendo calibración y certificación en sitio. Nuestro personal altamente calificado asegura que cada equipo funcione bajo los más altos estándares de calidad y seguridad, optimizando su rendimiento y prolongando su vida útil.'
     },
     {
       id: 3,
-      question: '¿Ofrecen servicios de instalación?',
-      answer: 'Sí, ofrecemos servicios de instalación profesional para todos nuestros productos. Ponte en contacto con nosotros para más detalles.'
+      question: 'Traslado de equipos',
+      answer: 'Disponemos de flota propia con unidades de cama baja, cama alta y grúa, adaptándonos a las necesidades específicas de cada cliente. Esto nos permite realizar el transporte de sus equipos con total seguridad, puntualidad y cumplimiento normativo, desde cualquier punto y hacia cualquier destino.'
     }
   ];
 

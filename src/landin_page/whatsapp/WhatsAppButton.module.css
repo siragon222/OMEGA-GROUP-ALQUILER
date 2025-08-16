@@ -1,0 +1,110 @@
+.whatsappButton {
+  position: fixed;
+  bottom: 40px;  /* Distancia desde la parte inferior */
+  right: 40px;   /* Distancia desde la derecha */
+  background-color: #25d366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+  z-index: 2147483647; /* Máximo para asegurar visibilidad */
+  overflow: hidden; /* Oculta el texto inicialmente */
+}
+
+.whatsappButton:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+  width: 180px; /* Ancho al pasar el ratón */
+  border-radius: 30px; /* Bordes menos redondeados al estirarse */
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  fill: white;
+  transition: margin-right 0.3s ease; /* Transición para el icono */
+}
+
+.whatsappButton:hover .icon {
+  margin-right: 10px; /* Espacio entre el icono y el texto al pasar el ratón */
+}
+
+.buttonText {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.whatsappButton:hover .buttonText {
+  opacity: 1;
+}
+
+/* Animación de pulso */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.whatsappButton {
+  animation: pulse 2s infinite;
+}
+
+/* Visibilidad controlada por JS: oculto fuera del viewport */
+.hidden {
+  opacity: 0;
+  transform: translateX(120%) !important;
+  pointer-events: none;
+}
+
+/* Desactivar expansión por hover en móviles y mantener proporción original */
+@media (max-width: 768px) {
+  .whatsappButton {
+    width: 60px; /* mantener tamaño original */
+    height: 60px; /* mantener tamaño original */
+    border-radius: 50%;
+    transform: none !important;
+  }
+  .whatsappButton:hover {
+    width: 60px; /* no expandir */
+    border-radius: 50%;
+    transform: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  }
+  .whatsappButton:hover .icon {
+    margin-right: 0; /* no desplazar icono */
+  }
+  .buttonText {
+    display: none; /* nunca mostrar texto en móviles */
+  }
+}
+/* Eliminado bloque duplicado y unificado arriba */
+
+.whatsappButton:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  fill: white;
+}
+
+/* Animación de pulso */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.whatsappButton {
+  animation: pulse 2s infinite;
+}

@@ -37,8 +37,14 @@ const ServiciosMobile = ({ servicios }) => {
                 image={servicio.image}
                 title={servicio.title}
                 description={servicio.description}
+                titleColor={servicio.titleColor}
+                descriptionColor={servicio.descriptionColor}
+                gradientFrom={servicio.gradientFrom}
+                gradientTo={servicio.gradientTo}
+                gradientHeight={servicio.gradientHeight}
                 // Directly control description visibility based on current slide
                 isVisible={index === currentIndex}
+                isMobile={true}
               />
             </div>
           ))}
@@ -56,6 +62,18 @@ const ServiciosMobile = ({ servicios }) => {
           />
         ))}
       </div>
+
+      <button
+        className="servicios-mobile-contact-button"
+        onClick={() => {
+          const phone = '573144686437';
+          const message = encodeURIComponent('Hola, me gustaría obtener más información sobre sus servicios de Alquiler de Maquinaría');
+          const url = `https://wa.me/${phone}?text=${message}`;
+          window.open(url, '_blank', 'noopener');
+        }}
+      >
+        Solicita tu cotización
+      </button>
     </div>
   );
 };

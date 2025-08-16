@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Formulario.css';
-import contactImage from '../../assets/gallery_image_1.webp';
+import contactImage from '../../assets/postal.webp';
 
 function Formulario() {
   const [termsAccepted, setTermsAccepted] = useState(false);

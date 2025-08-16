@@ -6,7 +6,7 @@
   text-align: center;
   width: 100%;
   box-sizing: border-box;
-    background-color: var(--color-forte); /* Usando color de index.css */
+    background-color: var(--color-black); /* Usando color de index.css */
 }
 
 .image-container {
@@ -99,7 +99,7 @@
 
 @media (max-width: 480px) {
   .top-image {
-    height: 80px;
+    height: 200px;
   }
 
   .description-text {

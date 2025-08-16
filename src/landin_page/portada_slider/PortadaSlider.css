@@ -7,10 +7,11 @@
   padding: 60px 0; /* Espacio superior e inferior dentro del fondo */
   min-height: 100vh; /* Ajusta según sea necesario */
   box-sizing: border-box;
-  background-image: url(../../assets/backgraund_img.webp); /* Set background image */
-  background-size: cover; /* Cover the entire container */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  /* Fondo con difuminado inferior */
+  background-image: linear-gradient(to top, var(--color-black) 0%, rgba(0, 0, 0, 0) 35%), url(../../assets/backgraund_img.webp);
+  background-size: cover, cover; /* Cover the entire container */
+  background-position: bottom center, center; /* Fade desde abajo y centrar imagen */
+  background-repeat: no-repeat, no-repeat; /* Do not repeat the image */
   background-color: var(--color-black); /* Fallback background color */
   width: 100%; /* Asegura que ocupe todo el ancho */
   margin: 0; /* Elimina cualquier margen externo */
@@ -28,30 +29,52 @@
 
 .video-box {
   position: relative;
-  width: 80%; /* Ajusta el ancho del recuadro del video */
-  max-width: 900px; /* Ancho máximo para el video */
+  width: 100%; /* Ajusta el ancho del recuadro del video */
+  max-width: 1500px; /* Ancho máximo para el video */
   border-radius: 15px;
   overflow: hidden;
   margin-bottom: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.unmute-button {
+.video-overlay {
   position: absolute;
-  bottom: 12px;
-  right: 12px;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  border: 0;
-  border-radius: 6px;
-  padding: 10px 14px;
-  font-family: var(--font-futura);
-  font-size: 14px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 
+.unmute-button {
+  padding: 15px 30px;
+  background-color: var(--color-red); /* Changed to red */
+  color: var(--color-white); /* Changed to white */
+  border: none;
+  border-radius: 50px; /* Made circular */
+  font-size: var(--text-size-body);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow */
+  display: flex; /* Added for icon and text alignment */
+  align-items: center; /* Added for icon and text alignment */
+  justify-content: center; /* Added for icon and text alignment */
+  gap: 10px; /* Space between icon and text */
+}
+
 .unmute-button:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background-color: #b31a1a; /* Darker red on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.play-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor; /* Inherit color from parent button */
 }
 
 .background-video {
@@ -59,6 +82,28 @@
   height: auto;
   display: block;
 }
+
+/* Botón de reproducción superpuesto */
+.play-overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(255, 0, 0);
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  padding: 14px 22px;
+  font-family: var(--font-futura);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.play-overlay:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Se removió overlay de audio para cumplir con el requerimiento sin botones */
 
 .company-description {
   font-family: var(--font-futura); /* Tipografía para descripciones */

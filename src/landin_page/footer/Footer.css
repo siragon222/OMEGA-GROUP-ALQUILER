@@ -4,6 +4,7 @@
   padding: 40px 20px;
   font-family: var(--font-family-roboto);
   width: 100%;
+  box-sizing: border-box; /* Añade esta línea */
 }
 
 .footer-content {

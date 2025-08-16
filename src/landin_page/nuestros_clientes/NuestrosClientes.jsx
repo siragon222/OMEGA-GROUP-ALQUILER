@@ -5,6 +5,7 @@ import cliente1Svg from '../../assets/cliente_1.svg';
 import cliente2Svg from '../../assets/cliente_2.svg';
 import cliente3Svg from '../../assets/cliente_3.svg';
 import cliente4Svg from '../../assets/cliente_4.svg';
+import fondo from '../../assets/fondo.webp';
 
 const NuestrosClientes = () => {
   const imageRef = useRef(null);
@@ -56,7 +57,15 @@ const NuestrosClientes = () => {
   // Removed useEffect for typing animation
 
   return (
-    <section className="nuestros-clientes-section">
+    <section
+      className="nuestros-clientes-section"
+      style={{
+        backgroundImage: `linear-gradient(to bottom, var(--color-black) 0%, rgba(0,0,0,0) 35%), url(${fondo})`,
+        backgroundSize: 'cover, cover',
+        backgroundPosition: 'top center, center',
+        backgroundRepeat: 'no-repeat, no-repeat',
+      }}
+    >
       <div className="image-container">
         <img
           ref={imageRef}

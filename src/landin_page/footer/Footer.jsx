@@ -39,7 +39,11 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="location-info"> {/* Ubicación movida aquí */}
           <FaMapMarkerAlt />
-          <p>KILOMETRO 1-VIA ACACIAS-GUAMAL VDA.EL CENTRO</p>
+          <p>km 1 vía Acacias - Guamal bodega 1 - Colombia</p>
+        </div>
+        <div className="location-info">
+          <FaMapMarkerAlt />
+          <p>Pompeya- Villavicencio manzana D casa 7 barrio villa Saray</p>
         </div>
         <p>&copy; 2025 Omega group. Todos los derechos reservados.</p>
       </div>

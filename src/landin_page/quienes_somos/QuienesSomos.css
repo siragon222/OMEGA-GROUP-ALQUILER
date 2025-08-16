@@ -2,7 +2,7 @@
   width: 100vw;
   margin: 0;
   padding: 20px 0;
-  background-color: var(--color-forte);
+  background-color: var(--color-black);
   color: var(--color-white);
   text-align: center;
   box-sizing: border-box; /* Asegura que padding no aumente el ancho total */
@@ -53,7 +53,7 @@
 .benefits-list li {
   display: flex;
   flex-direction: column; /* Cambiar a columna para que el SVG esté encima del texto */
-  align-items: letf; /* Centrar horizontalmente los elementos */
+  align-items: flex-start; /* Alinear a la izquierda */
   margin-bottom: 50px; /* Separación de 50px entre cada descripción */
   font-family: var(--font-futura);
   font-size: var(--text-size-body);
@@ -134,6 +134,17 @@
   .content-columns {
     flex-direction: column;
     align-items: center;
+  }
+
+  /* En móviles: icono a la izquierda y texto a la derecha en una sola línea */
+  .benefits-list li {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .benefit-icon {
+    margin-right: 12px;
+    margin-bottom: 0;
   }
 }
 

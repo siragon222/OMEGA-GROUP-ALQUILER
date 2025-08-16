@@ -7,6 +7,8 @@ import PreguntasFrecuentes from './landin_page/preguntas_frecuentes/PreguntasFre
 import Formulario from './landin_page/formulario/Formulario';
 import Header from './landin_page/header/Header';
 import Footer from './landin_page/footer/Footer';
+import WhatsAppButton from './landin_page/whatsapp/WhatsAppButton';
+import DescargaFormulario from './landin_page/descarga_formulario/DescargaFormulario';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
       <PreguntasFrecuentes />
       <Formulario />
       <Footer />
+      <WhatsAppButton />
+      <DescargaFormulario />
     </div>
   );
 }

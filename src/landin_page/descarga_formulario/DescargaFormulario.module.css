@@ -1,0 +1,52 @@
+.downloadButton {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  background-color: #f10707; /* Example red color for PDF */
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1000; /* Ensure it floats above other content */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+}
+
+.downloadButton:hover {
+  background-color: #b31a1a; /* Darker red on hover */
+  transform: translateY(-3px);
+  color: white;
+}
+
+.pdfIcon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor; /* Inherit color from parent */
+}
+
+.downloadButton:hover .pdfIcon {
+  fill: white;
+}
+
+.buttonText {
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+@media (max-width: 768px) {
+  .downloadButton {
+    bottom: 20px;
+    left: 20px;
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+
+  .pdfIcon {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,7 +1,7 @@
 .nuestro-servicios-section {
   text-align: center;
   padding: 2em 0;
-  background-color: var(--color-forte); /* Usando color de index.css */
+  background-color: var(--color-black); /* Usando color de index.css */
 }
 
 .nuestro-servicios-title {
@@ -33,6 +33,23 @@
 
 .servicios-container::-webkit-scrollbar-track {
   background-color: var(--color-gray); /* Color de fondo de la barra de desplazamiento */
+}
+
+/* Botón de cotización debajo de servicios */
+.servicios-contact-button {
+  margin-top: 20px;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: var(--text-size-body);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.servicios-contact-button:hover {
+  background-color: #b30000;
 }
 
 /* Comportamiento en móvil (carrusel) */
