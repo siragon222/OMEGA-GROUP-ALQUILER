@@ -35,7 +35,7 @@ $correo = filter_var($data['correo'], FILTER_VALIDATE_EMAIL);
 
 // Puedes definir el correo de destino aquí o pasarlo desde el frontend si es dinámico
 // Por ahora, lo dejaremos fijo como en el código original.
-$to = 'siragon222@gmail.com'; 
+$to = 'info@omegagroupsas.co'; 
 
 if ($nombre === '' || $telefono === '' || $correo === false) {
     http_response_code(400);
